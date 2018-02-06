@@ -62,7 +62,6 @@ function bot(data,socket,questionNum) {
   	waitTime =2000;
   	question = 'Come again?';	 		    	// load next question
   }
-
   // load next question
   else{
     	answer= 'Erm...Pizza. You can have pizza';// output response
