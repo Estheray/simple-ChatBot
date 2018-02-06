@@ -1,4 +1,5 @@
 
+
 /*
 chatServer.js
 Author: David Goedicke (da.goedicke@gmail.com)
@@ -37,7 +38,7 @@ io.on('connect', function(socket) {
 });
   socket.on('message', (data)=>{ // If we get a new message from the client we process it;
         console.log(data);
-	questionNum= bot(data,socket,questionNum);
+	questioNum= bot(data,socket,questionNum);
 
       });
   socket.on('disconnect', function() { // This function  gets called when the browser window gets closed
@@ -53,21 +54,21 @@ function bot(data,socket,questionNum) {
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-  	answer= 'Hello ' + input + ' :-)';// output response
-  	waitTime =2000;
-  	question = 'What would you like to eat?';			    	// load next question
+  answer= 'Hello ' + input + ' :-)';// output response
+  waitTime =2000;
+  question = 'What would you like to eat?';			    	// load next question
   }
+	
   else if (questionNum == 1) {
-  	answer= 'Mm sorry, didnt get that. Was that English? Pitty really, my native tongue is well, not English.';// output response
-  	waitTime =2000;
-  	question = 'Come again?';	 		    	// load next question
+  answer= 'Mm sorry, didnt get that. Was that English? Pitty really, my native tongue is Shyriiwook.';// output response
+  waitTime =2000;
+  question = 'Come again?';			    	// load next question
   }
-
   // load next question
   else{
-    	answer= 'Erm...Pizza. You can have pizza';// output response
-    	waitTime =0;
-    	question = '';
+    answer= 'Erm...Pizza. You can have pizza';// output response
+    waitTime =0;
+    question = '';
   }
 
 
